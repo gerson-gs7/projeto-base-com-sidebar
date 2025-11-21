@@ -1,4 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  @include mat.theme(
+    (
+      color: mat.$violet-palette,
+      typography: Roboto,
+      density: 0,
+    )
+  );
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary-container),
+      container-text-color: var(--mat-sys-primary),
+    )
+  );
+}
+
+.dark-mode {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: mat.$cyan-palette,
+    ),
+    $overrides: ("background": #24292e)
+  );
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary-container),
+      container-text-color: var(--mat-sys-primary),
+    )
+  );
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--mat-sys-background);
+  color: var(--mat-sys-on-background);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
