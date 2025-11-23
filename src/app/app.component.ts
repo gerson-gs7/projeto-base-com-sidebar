@@ -6,7 +6,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
   selector: 'app-root',
   imports: [RouterOutlet, ToolbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'projeto-base-com-sidebar';

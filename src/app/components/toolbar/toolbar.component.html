@@ -52,4 +52,8 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
+  <mat-slide-toggle [(ngModel)]="isChecked" (change)="switchTheme()">
+    <mat-icon *ngIf="isChecked">light</mat-icon>
+    <mat-icon *ngIf="!isChecked">light_mode</mat-icon>
+  </mat-slide-toggle>
 </mat-toolbar>
