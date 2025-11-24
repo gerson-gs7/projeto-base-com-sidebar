@@ -1,4 +1,13 @@
 <app-toolbar></app-toolbar>
-<div class="content">
+<mat-sidenav-container (backdropClick)="sideNavService.toogleNav()">
+  <mat-sidenav
+    (keydown.escape)="sideNavService.toogleNav()"
+    class="sidenav-content ps-2 pt-2"
+    mode="push"
+    [opened]="IsOpen()"
+    ><app-custom-sidenav></app-custom-sidenav
+  ></mat-sidenav>
+  <mat-sidenav-content class="router-content">
     <router-outlet />
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

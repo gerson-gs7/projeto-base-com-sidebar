@@ -6,6 +6,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from '../../shared/shared.module';
+import { SideNavService } from '../../app.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -26,11 +27,14 @@ export class ToolbarComponent implements OnInit {
   isChecked = false;
   private renderer = inject(Renderer2);
   private document = inject(DOCUMENT);
+  private sideNavService = inject(SideNavService);
 
   ngOnInit(): void {
     console.log(this.isChecked);
   }
-
+  toogleNav() {
+    this.sideNavService.toogleNav();
+  }
   switchTheme() {
     console.log('mudou ' + this.isChecked);
 
