@@ -1,5 +1,5 @@
 <mat-nav-list>
-  <a mat-list-item *ngFor="let item of menuItems()">
+  <a [href]="item.route" mat-list-item *ngFor="let item of menuItems()">
     <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
     <span matListItemTitle>{{ item.label }}</span>
   </a>

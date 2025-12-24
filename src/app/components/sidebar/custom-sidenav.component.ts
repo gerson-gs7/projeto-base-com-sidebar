@@ -24,8 +24,8 @@ export class CustomSideNavComponent {
     },
     {
       icon: 'star',
-      label: 'Star',
-      route: '/star',
+      label: 'Buggati',
+      route: '/buggati',
     },
     {
       icon: 'app_registration',
